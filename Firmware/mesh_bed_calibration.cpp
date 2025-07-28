@@ -33,7 +33,7 @@ float   world2machine_shift[2];
 // The correction is tiny, here around 0.5mm on 250mm length.
 //#define MACHINE_AXIS_SCALE_X ((250.f - 0.5f) / 250.f)
 //#define MACHINE_AXIS_SCALE_Y ((250.f - 0.5f) / 250.f)
-#define MACHINE_AXIS_SCALE_X 1.f
+#define MACHINE_AXIS_SCALE_X 0.82f
 #define MACHINE_AXIS_SCALE_Y 1.f
 
 #define BED_CALIBRATION_POINT_OFFSET_MAX_EUCLIDIAN  (0.8f)
