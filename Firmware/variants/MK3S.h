@@ -93,8 +93,8 @@
  */
 #define SHEET_PRINT_ZERO_REF_Y -2.f
 
-#define DEFAULT_MAX_FEEDRATE                {200, 200, 12, 120}      // (mm/sec)   max feedrate (M203)
-#define DEFAULT_MAX_FEEDRATE_SILENT         {100, 100, 12, 120}      // (mm/sec)   max feedrate (M203), silent mode
+#define DEFAULT_MAX_FEEDRATE                {200, 200, 12, 1200} // 120 FIXME     // (mm/sec)   max feedrate (M203)
+#define DEFAULT_MAX_FEEDRATE_SILENT         {100, 100, 12, 1200} // 120 FIXME     // (mm/sec)   max feedrate (M203), silent mode
 
 #define DEFAULT_MAX_ACCELERATION            {1000, 1000, 200, 5000}  // (mm/sec^2) max acceleration (M201)
 #define DEFAULT_MAX_ACCELERATION_SILENT     {960, 960, 200, 5000}    // (mm/sec^2) max acceleration (M201), silent mode
@@ -221,7 +221,7 @@
 
 #define TMC2130_USTEPS_XY   16        // microstep resolution for XY axes
 #define TMC2130_USTEPS_Z    16        // microstep resolution for Z axis
-#define TMC2130_USTEPS_E    32        // microstep resolution for E axis
+#define TMC2130_USTEPS_E    1 // 32 FIXME       // microstep resolution for E axis
 #define TMC2130_INTPOL_XY   1         // extrapolate 256 for XY axes
 #define TMC2130_INTPOL_Z    1         // extrapolate 256 for Z axis
 #define TMC2130_INTPOL_E    1         // extrapolate 256 for E axis
@@ -285,7 +285,7 @@
 //new settings is possible for vsense = 1, running current value > 31 set vsense to zero and shift both currents by 1 bit right (Z axis only)
 #define TMC2130_CURRENTS_H {16, 20, 35, 30}  // default holding currents for all axes
 #define TMC2130_CURRENTS_FARM 36             // E 805 mA peak for ECool/farm mode
-#define TMC2130_CURRENTS_R {16, 20, 35, 30}  // default running currents for all axes
+#define TMC2130_CURRENTS_R {16, 20, 35, 40} // 30 FIXME  // default running currents for all axes
 #define TMC2130_CURRENTS_R_HOME {8, 10, 20, 18}  // homing running currents for all axes
 
 #define TMC2130_STEALTH_Z
@@ -343,7 +343,7 @@
 #endif
 
 // Extrude mintemp
-#define EXTRUDE_MINTEMP 175
+#define EXTRUDE_MINTEMP 0 // FIXME 175
 
 // Quick nozzle change supported
 //#define QUICK_NOZZLE_CHANGE
@@ -527,7 +527,7 @@
  PREHEAT SETTINGS
  *------------------------------------*/
 
-#define PLA_PREHEAT_HOTEND_TEMP 230
+#define PLA_PREHEAT_HOTEND_TEMP 215
 #define PLA_PREHEAT_HPB_TEMP 60
 
 #define PVB_PREHEAT_HOTEND_TEMP 215
